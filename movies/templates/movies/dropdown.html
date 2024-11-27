@@ -1,0 +1,32 @@
+<nav class="wrapper">
+  <ul class="menu">
+    <li class="nav-item logo"><a href="{% url 'home' %}">Улюблений кінотеатр</a></li>
+    <li class="nav-item dropdown"><a href="{% url 'type' 'movies' %}">Фільми</a>
+       <ul class="sub-menu">
+         <li class="nav-item"><a href="{% url 'genre' 'movies' 'comedy' %}">Комедії</a></li>
+         <li class="nav-item"><a href="{% url 'genre' 'movies' 'fantastic' %}">Фантастика</a></li>
+         <li class="nav-item"><a href="{% url 'genre' 'movies' 'horror' %}">Жахи</a></li>
+         <li class="nav-item"><a href="{% url 'genre' 'movies' 'action' %}">Бойовики</a></li>
+         <li class="nav-item"><a href="{% url 'genre' 'movies' 'adventure' %}">Пригоди</a></li>
+         <li class="nav-item"><a href="{% url 'genre' 'movies' 'documentary' %}">Документальні</a></li>
+       </ul>
+    </li>
+
+    <li class="nav-item dropdown"><a href="{% url 'type' 'cartoons' %}">Мультфільми</a>
+      <ul class="sub-menu">
+        <li class="nav-item"><a href="{% url 'genre' 'cartoons' 'comedy' %}">Комедії</a></li>
+        <li class="nav-item"><a href="{% url 'genre' 'cartoons' 'family' %}">Сімейні</a></li>
+        <li class="nav-item"><a href="{% url 'genre' 'cartoons' 'adventure' %}">Пригоди</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item dropdown"><a href="{% url 'type' 'series' %}">Серіали</a>
+      <ul class="sub-menu">
+        <li class="nav-item"><a href="{% url 'genre' 'series' 'drama' %}">Драми</a></li>
+        <li class="nav-item"><a href="{% url 'genre' 'series' 'melodrama' %}">Мелодрами</a></li>
+        <li class="nav-item"><a href="{% url 'genre' 'series' 'action' %}">Бойовики</a></li>
+        <li class="nav-item"><a href="{% url 'genre' 'series' 'horror' %}">Жахи</a></li>
+      </ul>
+    <li class="nav-item reg"><a href="{% url 'login' %}">Логін</a></li>
+  </ul>
+</nav>

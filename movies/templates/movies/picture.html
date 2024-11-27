@@ -1,0 +1,16 @@
+{% extends 'movies/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <p>Назва: {{result.title}}</p>
+    <p>Рейтинг: {{result.rating}}</p>
+    <p>Жанр: {{genre}}</p>
+    <div class="content">
+        <img src="{{ result.image.image.url }}" alt="photo">
+    </div>
+    <div class="description">{{result.description}}</div>
+    <div class="trailer">
+        <iframe width="560" height="315" src={{result.trailer}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+{% endblock %}

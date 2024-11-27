@@ -1,0 +1,5 @@
+<a href="{% url 'picture' el.id %}">
+    <img src="{{ el.image.image.url }}" alt="photo">
+    <p>Назва: {{el.title}}</p>
+    <p>Рейтинг: {{el.rating}}</p>
+</a>

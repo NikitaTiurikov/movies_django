@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link type="text/css" href="{% static 'movies/css/login.css' %}" rel="stylesheet"></head>
+</head>
+<body>
+    <div class="wrapper">{{title}}</div>
+    <div class="div-form">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p><button type="submit">Відправити</button></p>
+    </form>
+    </div>
+</body>
+</html>

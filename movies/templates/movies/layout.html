@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{Title}{% endblock %}</title>
+    <link type="text/css" href="{% static 'movies/css/dropdown.css' %}" rel="stylesheet"></head>
+    <link type="text/css" href="{% static 'movies/css/slider.css' %}" rel="stylesheet"></head>
+    <link type="text/css" href="{% static 'movies/css/main.css' %}" rel="stylesheet"></head>
+<body>
+    <header>
+        {% include 'movies/dropdown.html' %}
+    </header>
+    <div class="all_content">
+            {% block content %}
+
+            {% endblock %}
+    </div>
+    <footer>
+        <div class="contacts">
+            <p>Контакти</p>
+            <div>
+                <p>Якісь адреси:</p>
+            </div>
+            <div>
+                <p>Якісь телефони:</p>
+            </div>
+            <div>
+                <p>Чат-бот:</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

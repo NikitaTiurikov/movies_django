@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  background: url("../images/background.jpg");
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  width: 1600px;
+  background: linear-gradient(to right, #094d74 0%, #759cd8 100%);
+  margin: auto;
+}
+.div-form {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input{
+  float: right;
+}
+p:last-child, a,button{
+    display: inline-block;
+}
+.filter{
+
+}

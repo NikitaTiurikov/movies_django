@@ -1,0 +1,37 @@
+{% extends 'movies/layout.html' %}
+{% load static %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+    {% include 'movies/slider.html' %}
+    <div>
+        <p class="top">Топ фільмів:</p>
+        {% for el in movies %}
+        <div class="main-content">
+            <a href="{% url 'picture' el.id %}">
+                {% include 'movies/content.html' %}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+        <p class="top">Топ мультфільмів:</p>
+        {% for el in cartoons %}
+        <div class="main-content">
+            <a href="#">
+              {% include 'movies/content.html' %}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+        <p class="top">Топ серіалів:</p>
+        {% for el in series %}
+        <div class="main-content">
+            <a href="#">
+               {% include 'movies/content.html' %}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <script src="{% static 'movies/js/slider.js' %}"></script>
+{% endblock %}
